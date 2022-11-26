@@ -1,0 +1,18 @@
+1 PHP Coding Structure
+2 Writing “Hello World” program using PHP
+3 Defining variable and constant.
+4 Case Sensitive in PHP
+5 Valid & Invalid Variable.
+6 PHP Output Print
+7 PHP Data types
+8 Operator and Expression
+9 How to do PHP Comment.
+10 Use of Concat operator.
+11 Assignment Operator
+12 Athematic operation in PHP
+13 PHP Number System
+14 Use printf, sprintf, print_r, var_dump etc functions.
+
+Student Works:
+--------------
+>> Swap two variables. Example: a = 20, b= 30; Output: a = 30, b = 20;

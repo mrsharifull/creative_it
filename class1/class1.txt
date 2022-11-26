@@ -1,0 +1,15 @@
+1. Basic Discussion on Web Architecture.
+2. Differences between Static & Dynamic Website.
+3. What is Client Side & Server Side?
+4. Tools we will need for Web Development.
+5. HTTP - Hyper Text Transfer Protocol.
+6. URL - Uniform Resource Locator.
+7. XAMPP,WAMP,Laragon - Cross Platform Apache MariaDB PHP and Perl
+8. What is Programming Language?
+9. Comparing PHP with other Web scripting languages or technology
+10. History of PHP
+11. PHP in Web Development
+12. History of WordPress
+13. What is a content management system?
+14. WordPress.com vs. WordPress.org
+15. Code editor (Atom, VS Code, Sublime Text etc)
