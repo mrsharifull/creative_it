@@ -24,7 +24,7 @@
 // echo $joinStr;
 // echo "\n\n";
 
-#password incripet
+#password encripet
 // $password = "123456";
 // echo md5($password);
 // echo sha1($password);
@@ -78,7 +78,40 @@
 // print_r(json_decode($jenarr));
 // echo "\n";
 
-$str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet congue elementum.';
-$substr = substr($str, 0, 27);
-echo $substr;
-echo "\n";
+// $str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet congue elementum.';
+// $substr = substr($str, 0, 27);
+// echo $substr;
+// echo "\n";
+
+// #heredoc syntax
+// $name = <<<EOD
+//     Baktear
+//         Ali
+//             Baktear
+// EOD;
+// echo $name;
+// echo "\n";
+
+// #FIle functions
+// // $filePath = '\\european_it\\XAMPP\\htdocs\\creative_it\\class9';
+// $filePath = '/european_it/XAMPP/htdocs/creative_it/class9/demo.txt';
+// $fp = fopen($filePath, 'r');
+
+// $line = fgets($fp);
+// echo $line;
+// $line = fgets($fp);
+// echo $line;
+// $line = fgets($fp);
+// echo $line;
+// echo file_get_contents($filePath);
+// echo "\n";
+// $file = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+// print_r($file);
+// fclose($fp);
+
+#home work-1 string reverse without strrev function.
+$str = 'Hellow world';
+$i = strlen($str) - 1;
+for ($i; $i >= 0; $i--) {
+    echo $str[$i];
+}
