@@ -35,5 +35,5 @@ function position($arr, $value)
 }
 
 $numbers = [1, 2, 3, 5, 7, 11, 15];
-$target = 6;
+$target = 4;
 position($numbers, $target);
