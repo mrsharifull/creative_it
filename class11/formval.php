@@ -31,7 +31,7 @@
                             id="emailId" value="<?= $email ?? '' ?>">
                         <p class="text-danger"><?= $error['emailError'] ?? '' ?></p>
                         <label for="phoneId" class="form-label">Number</label>
-                        <input type="number" class="form-control mb-2" name="phone"
+                        <input type="text" class="form-control mb-2" name="phone"
                             placeholder="Enter your phone number.." id="phoneId" value="<?= $phone ?? '' ?>">
                         <p class="text-danger"><?= $error['phoneError'] ?? '' ?></p>
                         <button type="submit" name="submit" class="btn btn-primary mb-2">Submit</button>
