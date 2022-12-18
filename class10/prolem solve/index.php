@@ -37,3 +37,21 @@ function position($arr, $value)
 $numbers = [1, 2, 3, 5, 7, 11, 15];
 $target = 4;
 position($numbers, $target);
+
+echo "\n";
+
+#problem-2
+function targetIndex($arr, $value)
+{
+    if (array_search($value, $arr) == true) {
+        echo array_search($value, $arr);
+    } else {
+        array_push($arr, $value);
+        sort($arr);
+        echo array_search($value, $arr);
+    }
+}
+
+$numbers = [1, 2, 3, 5, 7, 11, 15];
+$targetValue = 4;
+targetIndex($numbers, $targetValue);
