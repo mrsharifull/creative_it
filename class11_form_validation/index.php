@@ -1,16 +1,14 @@
 <?php
 //validation function
-
 function phoneVal($number)
 {
     return preg_match('/^[0-9]{11}+$/', $number);
 }
-
 //form validation php code
 if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
+    $name = trim(htmlentities($_POST['name']));
+    $email = trim(htmlentities($_POST['email']));
+    $phone = trim(htmlentities($_POST['phone']));
 
     $error = [];
     if (empty($name)) {
@@ -28,12 +26,7 @@ if (isset($_POST['submit'])) {
     }
     if (empty($error)) {
         $success = 'Data Inserted';
-        $name = '';
-        $email = '';
-        $phone = '';
     }
 }
-
-
 //form view page
 include 'formval.php';
