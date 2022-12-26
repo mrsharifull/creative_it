@@ -15,17 +15,7 @@ if (isset($_POST['submit'])) {
     //image upload
     $photo_ex = explode('.', $photo['name']);
     $photoType = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
-    $photoName = NULL;
-    if ($photo['name']) {
-        $photoName = uniqid() . '.' . end($photo_ex);
-        if (!in_array(strtolower(end($photo_ex)), $photoType)) {
-            $error['photoError'] = '<i class="bi bi-x-circle"></i> Upload valid image!';
-        } elseif ($photo['size'] > 5242880) {
-            $error['photoError'] = '<i class="bi bi-x-circle"></i> Max upload file size 5mb!';
-        }
-        move_uploaded_file($photo['tmp_name'], 'upload/profileImage/' . $photoName);
-    }
-
+    
     //Validation
     $error = [];
     if (empty($fname)) {
@@ -43,6 +33,17 @@ if (isset($_POST['submit'])) {
         $error['passwordError'] = '<i class="bi bi-x-circle"></i> Please enter your password!';
     } elseif (strlen($password) < 8) {
         $error['passwordError'] = '<i class="bi bi-x-circle"></i> Must be use minimum 8 character password!';
+    }
+    $photoName = NULL;
+    if ($photo['name']) {
+        if (!in_array(strtolower(end($photo_ex)), $photoType)) {
+            $error['photoError'] = '<i class="bi bi-x-circle"></i> Upload valid image!';
+        } elseif ($photo['size'] > 5242880) {
+            $error['photoError'] = '<i class="bi bi-x-circle"></i> Max upload file size 5mb!';
+        } else {
+            $photoName = uniqid() . '.' . end($photo_ex);
+            move_uploaded_file($photo['tmp_name'], 'upload/profileImage/' . $photoName);
+        }
     }
     // if (empty($photo['name'])) {
     //     $error['photoError'] = '<i class="bi bi-x-circle"></i> Please choose your image!';
