@@ -26,6 +26,7 @@ include('layout/header.view.php');
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Email</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                             <?php
@@ -39,11 +40,17 @@ include('layout/header.view.php');
                                 <td><?= $item['fname'] ?></td>
                                 <td><?= $item['lname'] ?></td>
                                 <td><?= $item['email'] ?></td>
+                                <td><?= $item['status'] == 1 ? '<span class="badge text-bg-success">Active</span>' : '<span class="badge text-bg-warning">Deactive</span>' ?>
+                                </td>
                                 <td>
                                     <a href="edit.php?id=<?= base64_encode($item['id']) ?>"
                                         class="btn btn-sm btn-primary">Edit</a>
-                                    <a href="" class="btn btn-sm btn-success">View</a>
-                                    <a href="" class="btn btn-sm btn-danger">Delete</a>
+                                    <a href="single.php?id=<?= base64_encode($item['id']) ?>"
+                                        class="btn btn-sm btn-success">View</a>
+                                    <a href="delete.php?id=<?= base64_encode($item['id']) ?>"
+                                        class="btn btn-sm btn-danger">Delete</a>
+                                    <a href="status.php?id=<?= base64_encode($item['id']) ?>"
+                                        class="btn btn-sm <?= $item['status'] == 1 ? 'btn-warning' : 'btn-success' ?>"><?= $item['status'] == 1 ? 'Deactive' : 'Active' ?></a>
                                 </td>
                             </tr>
                             <?php

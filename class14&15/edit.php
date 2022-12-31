@@ -48,8 +48,14 @@ if (isset($_POST['submit'])) {
             $error['imageError'] = 'Max image size 5mb supported';
         } else {
             $image_name = uniqid() . '.' . strtolower(end($image_ex));
+            $file_path = "upload/profile/" . $data['photo'];
+            if (file_exists($file_path)) {
+                unlink($file_path);
+            }
             move_uploaded_file($image['tmp_name'], 'upload/profile/' . $image_name);
         }
+    } else {
+        $image_name = $data['photo'];
     }
     if ($error == []) {
         $updateQuery = "UPDATE users SET fname='$fname',lname='$lname',email='$email',photo='$image_name' WHERE id = $id";
